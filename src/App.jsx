@@ -5,11 +5,16 @@ import './App.css'
 import { Button } from 'react-bootstrap';
 
 function App() {
+
+
+
+
   const [text, setText] = useState('');
   const dispatch = useDispatch();
   const todos = useSelector(state => state.todos);
 
   const handleAddTodo = () => {
+
     if (text.trim() !== '') {
       dispatch(addTodo({
         id: Date.now(),
@@ -48,7 +53,7 @@ function App() {
          
              
               <div className='box'>
- <div>  <input 
+           <div>  <input 
                 type="checkbox" 
                 checked={todo.completed} 
                 onChange={() => handleToggleTodo(todo.id)} 
@@ -61,7 +66,8 @@ function App() {
          
         ))}
       </div>
-      {completedTodosCount > 0 && <p>Number of Completed Todos: {completedTodosCount}</p>}
+      
+      {completedTodosCount > 0 && <p>Total Completed Todos: {completedTodosCount}</p>}
     </div>
   );
 }

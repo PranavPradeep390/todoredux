@@ -44,3 +44,7 @@
   border-radius: 5px;
   color: white;
 }
+.box>input{
+  padding: 2px;
+  background-color: blue;
+}
