@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, deleteTodo, toggleTodo } from './TodoSlice';
 import './App.css'
+import { Button } from 'react-bootstrap';
 
 function App() {
   const [text, setText] = useState('');
@@ -31,29 +32,36 @@ function App() {
 
   return (
     <div>
-      <h1>Todo App</h1>
-      <input 
+      <h1> <i>My Todo List</i></h1>
+      <input className='todoinput'
         type="text" 
         value={text} 
         onChange={e => setText(e.target.value)} 
-        placeholder="Enter todo"
+        placeholder="Add todo..."
       />
-      <button onClick={handleAddTodo}>Add Todo</button>
+      <Button className='addtodobtn' onClick={handleAddTodo}><b>Add Todo</b></Button>
+      <p>Tick your todo if you've completed it :)</p>
       
-      <div>
+      <div className='tododiv'>
         {todos.map(todo => (
           <div key={todo.id} style={{backgroundColor: todo.completed ? 'lightgray' : 'transparent', padding: '5px', marginBottom: '5px'}}>
-            <input 
-              type="checkbox" 
-              checked={todo.completed} 
-              onChange={() => handleToggleTodo(todo.id)} 
-            />
-             {todo.text}
-            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
-          </div>
+         
+             
+              <div className='box'>
+ <div>  <input 
+                type="checkbox" 
+                checked={todo.completed} 
+                onChange={() => handleToggleTodo(todo.id)} 
+              />
+                
+                 {todo.text}</div>
+               <div> <button className='dltbtn' onClick={() => handleDeleteTodo(todo.id)}><b>Delete</b></button></div>
+              </div>
+            </div>
+         
         ))}
       </div>
-      {completedTodosCount > 0 && <p>Number of completed todos: {completedTodosCount}</p>}
+      {completedTodosCount > 0 && <p>Number of Completed Todos: {completedTodosCount}</p>}
     </div>
   );
 }

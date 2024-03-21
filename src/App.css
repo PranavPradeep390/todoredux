@@ -1,0 +1,32 @@
+.addtodobtn{
+  background-color: rgb(133, 133, 234);
+  padding: 10px 20px;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+}
+.todoinput{
+  background-color: rgb(217, 217, 241);
+  padding: 10px 20px;
+  border: transparent;
+  border-radius: 5px;
+  margin-right: 50px;
+
+}
+.tododiv{
+  background-color: rgb(119, 219, 219);
+  padding: 30px;
+  border: solid 1px black;
+}
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dltbtn{
+  background-color: rgb(133, 133, 234);
+  padding: 10px 20px;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+}
