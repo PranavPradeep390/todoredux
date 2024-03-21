@@ -1,5 +1,5 @@
 .addtodobtn{
-  background-color: rgb(133, 133, 234);
+  background-color: rgb(111, 111, 238);
   padding: 10px 20px;
   border: transparent;
   border-radius: 5px;
@@ -24,7 +24,21 @@
   justify-content: space-between;
 }
 .dltbtn{
-  background-color: rgb(133, 133, 234);
+  background-color: rgb(111, 111, 238);
+  padding: 10px 20px;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+}
+.addtodobtn:hover{
+  background-color: rgb(143, 146, 79);
+  padding: 10px 20px;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+}
+.dltbtn:hover{
+  background-color: rgb(143, 146, 79);
   padding: 10px 20px;
   border: transparent;
   border-radius: 5px;
